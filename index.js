@@ -9,7 +9,9 @@ app.get('/',(req,res)=>{
 })
 app.options('/upload', cors());
 app.post('/upload',cors(), upload.single('file'), (req,res)=>{
-  res.send(req.file.filename)
+  let filename = req.file.filename
+  let params = {id: filename}
+  res.send(JSON.stringify(params))
 })
 
 
