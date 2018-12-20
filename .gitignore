@@ -6,3 +6,4 @@ dist
 client/dist/
 npm-debug.log
 npm-debug.log.*
+uploads/
